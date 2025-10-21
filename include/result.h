@@ -35,7 +35,7 @@ struct Result {
         method_parameters[key] = std::string(value);
     }
 
-    // Template dla typów numerycznych
+    // Template dla typów num
     template<typename T>
     typename std::enable_if<std::is_arithmetic<T>::value, void>::type
     addParameter(const std::string& key, const T& value) {

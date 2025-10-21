@@ -11,7 +11,7 @@
 class Config {
 public:
     std::string data_file;
-    std::optional<double> optimal_value;  // Opcjonalne, może być w pliku TSPLIB
+    std::optional<double> optimal_value;  // Opcjonalne, bo może być w pliku TSPLIB
     int iterations;
     int repetitions;
     double max_time;

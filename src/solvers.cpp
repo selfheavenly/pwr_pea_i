@@ -46,7 +46,7 @@ Result BruteForceSolver::solve() {
     }
     result.method_name = getName();
 
-    // Dodaj parametry metody
+    // Parametry metody
     result.addParameter("algorithm", "brute-force");
 
     auto start = chrono::high_resolution_clock::now();
@@ -55,7 +55,7 @@ Result BruteForceSolver::solve() {
         cerr << "Warning: Brute Force is not recommended for more than 10 cities!" << endl;
     }
 
-    // Utwórz permutację miast (z wyłączeniem pierwszego, które jest ustalone)
+    // Utworzenie permutacji miast (poza pierwszym, które jest ustalone)
     vector<int> cities;
     for (int i = 1; i < instance.size; i++) {
         cities.push_back(i);
@@ -112,7 +112,7 @@ Result NearestNeighbourSolver::solve() {
     }
     result.method_name = getName();
 
-    // Dodaj parametry metody
+    // Param
     result.addParameter("start_city", start_city);
     result.addParameter("algorithm", "nearest-neighbour");
 
@@ -178,7 +178,7 @@ Result RandomSolver::solve() {
     }
     result.method_name = getName();
 
-    // Dodaj parametry metody
+    // Parametry
     result.addParameter("max_iterations", iterations);
     result.addParameter("max_time", max_time);
     result.addParameter("algorithm", "random");
@@ -208,7 +208,7 @@ Result RandomSolver::solve() {
             best_length = length;
             best_tour = cities;
 
-            // Early stopping jeśli znaleziono rozwiązanie optymalne (z tolerancją)
+            // Early stopping - jeśli znaleziono rozwiązanie optymalne (z tolerancją)
             if (instance.optimal_length.has_value()) {
                 double tolerance = 0.01;
                 if (abs(best_length - instance.optimal_length.value()) < tolerance) {

@@ -29,7 +29,7 @@ Config ConfigReader::readConfig(const string& filename) {
     while (getline(file, line)) {
         line_number++;
 
-        // Usuń białe znaki z początku i końca
+        // Usuwanie bialych znakow
         size_t start = line.find_first_not_of(" \t\r\n");
         size_t end = line.find_last_not_of(" \t\r\n");
 
@@ -37,7 +37,7 @@ Config ConfigReader::readConfig(const string& filename) {
 
         line = line.substr(start, end - start + 1);
 
-        // Pomiń komentarze
+        // Pomijanie komentarzy
         if (line.empty() || line[0] == '#') continue;
 
         size_t pos = line.find('=');
@@ -46,11 +46,11 @@ Config ConfigReader::readConfig(const string& filename) {
             continue;
         }
 
-        // Wyciągnij klucz i wartość z trimowaniem
+        // Ekstrakcja klucza i waertosci
         string key = line.substr(0, pos);
         string value = line.substr(pos + 1);
 
-        // Usuń białe znaki z klucza i wartości
+        // Usuwania b. znakow dla klucza i wartosci
         key.erase(remove_if(key.begin(), key.end(), ::isspace), key.end());
         value.erase(remove_if(value.begin(), value.end(), ::isspace), value.end());
 

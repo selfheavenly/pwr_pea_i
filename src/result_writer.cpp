@@ -20,7 +20,7 @@ void ResultWriter::writeToCSV(const string& filename, const vector<Result>& resu
         return;
     }
 
-    // Zbierz wszystkie unikalne klucze parametrów
+    // Zebranie tylko unikatowych kluczy
     set<string> all_param_keys;
     for (const auto& result : results) {
         for (const auto& [key, value] : result.method_parameters) {
@@ -28,12 +28,12 @@ void ResultWriter::writeToCSV(const string& filename, const vector<Result>& resu
         }
     }
 
-    // Nagłówek
+    // Nagłowek
     file << "Instance,Method,Optimal_value,Optimal_tour,Found_value,"
          << "Found_tour,Execution_time[ms],Absolute_error,Relative_error,"
          << "Relative_error[%]";
 
-    // Dodaj kolumny dla parametrów
+    // Kolumny (CSV)
     for (const auto& key : all_param_keys) {
         file << "," << key;
     }
@@ -76,7 +76,7 @@ void ResultWriter::writeToCSV(const string& filename, const vector<Result>& resu
              << fixed << setprecision(6) << result.relative_error << ","
              << fixed << setprecision(2) << result.relative_error_percent;
 
-        // Dodaj wartości parametrów
+        // Wartosci parametrow
         for (const auto& key : all_param_keys) {
             file << ",";
             auto it = result.method_parameters.find(key);

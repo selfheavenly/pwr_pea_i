@@ -22,7 +22,7 @@ private:
 public:
     TestSuite(bool progress = false) : show_progress(progress) {}
 
-    // Wczytaj listę instancji testowych z pliku
+    // Wczytanie instancji testowych z pliku
     bool loadTestInstances(const std::string& test_list_file) {
         std::ifstream file(test_list_file);
         if (!file.is_open()) {

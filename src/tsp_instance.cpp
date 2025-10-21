@@ -60,7 +60,7 @@ bool TSPInstance::loadFromFile(const string& filename) {
         if (line == "TOUR_SECTION") {
             reading_tour = true;
             reading_matrix = false;
-            // Wczytaj optymalną trasę jeśli obecna
+            // Wczytaj optymalną trasę (jeśli obecna)
             vector<int> tour;
             while (getline(file, line)) {
                 line = trim(line);
@@ -75,7 +75,7 @@ bool TSPInstance::loadFromFile(const string& filename) {
             continue;
         }
 
-        // Parsuj pola nagłówka
+        // Parsowanie pola naglowka
         if (!reading_matrix && !reading_tour) {
             parseHeader(line);
         }
