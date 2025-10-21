@@ -1,0 +1,47 @@
+# Ignoruje katalog debugowania CMake
+cmake-build-debug
+# Ignoruje pliki metadanych macOS
+.DS_Store
+# Ignoruje pliki miniatur Windows
+Thumbs.db
+# Ignoruje pliki konfiguracyjne Windows
+desktop.ini
+
+# Ignoruje pliki konfiguracyjne środowiska
+.env
+# Ignoruje lokalne pliki konfiguracyjne
+*.local
+
+# Ignoruje katalog wydania CMake
+cmake-build-release
+# Ignoruje wszystkie katalogi budowania CMake
+cmake-build-*
+
+# Ignoruje specyficzne pliki konfiguracyjne CLion
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/*.iml
+
+# Ignoruje pliki logów
+*.log
+# Ignoruje pliki tymczasowe
+*.tmp
+# Ignoruje pliki kopii zapasowych
+*.bak
+# Ignoruje pliki swap Vima
+*.swp
+*.swo
+
+# Ignoruje skompilowane pliki obiektowe
+*.o
+*.obj
+# Ignoruje pliki wykonywalne
+*.exe
+*.out
+*.app
+# Ignoruje biblioteki współdzielone i statyczne
+*.so
+*.dylib
+*.a

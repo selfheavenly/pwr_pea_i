@@ -1,0 +1,24 @@
+# TSP Solver Configuration File
+# Linie zaczynające się od # są komentarzami
+
+# Ścieżka do pliku danych w formacie TSPLIB
+data_file = ftv33.atsp
+
+# Opcjonalnie: Nadpisz wartość optymalną jeśli nie ma jej w pliku
+optimal_value = 1286
+
+# Wybór metody: brute-force, nearest-neighbour, random
+method = nearest-neighbour
+
+# Liczba powtórzeń dla każdego testu
+repetitions = 5
+
+# Parametry dla metody Random
+iterations = 100000
+max_time = 60.0
+
+# Wyświetlanie postępu podczas rozwiązywania
+show_progress = true
+
+# Plik wyjściowy dla wyników
+output_file = results.csv

@@ -1,0 +1,7 @@
+# Format: ścieżka_do_pliku optimal_value
+br17.txt 39
+ftv33.atsp 1286
+ftv35.atsp 1286
+ftv47.atsp 1286
+ftv70.atsp 1286
+# ftv44.atsp 1613
